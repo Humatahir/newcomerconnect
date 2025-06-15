@@ -1,5 +1,54 @@
 ---
-description:
-globs:
+description: 
+globs: 
 alwaysApply: false
 ---
+# Codebase Guide for simple-next
+
+This guide provides a comprehensive overview of the `simple-next` project structure, components, and content management system.
+
+## Project Structure
+
+The project is a Next.js application using the App Router. The main directories are:
+
+-   `app/`: Contains all the routes and pages.
+    -   `app/(default)/`: A route group for the main marketing pages of the site like the homepage (`page.tsx`), `blog`, `pricing`, etc.
+    -   `app/(auth)/`: A route group for authentication pages (e.g., sign-in, sign-up).
+    -   `app/api/`: Contains API routes.
+    -   `app/layout.tsx`: The root layout for the entire application.
+-   `components/`: A rich library of reusable React components.
+-   `content/`: Contains the MDX files that make up the content for the blog and documentation pages.
+    -   `content/blog/`: Contains individual blog posts as `.mdx` files.
+-   `public/`: For static assets like images and fonts.
+-   `utils/`: Contains custom React hooks.
+-   `next.config.js`: Configures Next.js, including the MDX plugin.
+
+## Routing
+
+Routing is handled by the Next.js App Router, with directories inside `app/` mapping to URL segments. For example, `app/(default)/blog/` contains the pages for the `/blog` route.
+
+## Components
+
+The `components/` directory is well-organized and contains a wide variety of components. Some of the key ones are:
+
+-   `components/ui/header.tsx`: The main site header.
+-   `components/ui/footer.tsx`: The main site footer.
+-   `components/hero-home.tsx`: The hero section for the homepage.
+-   `components/features-home.tsx`: A component to display features on the homepage.
+-   `components/post-item.tsx`: A component to display a single blog post in a list.
+-   `components/mdx/`: Components specifically for rendering MDX content.
+
+## Content Management
+
+The site uses a Git-based headless CMS approach with MDX files.
+
+-   **Content Source**: All content is stored in the `content/` directory as `.mdx` files.
+-   **Rendering**: The `@next/mdx` plugin, configured in `next.config.js`, allows Next.js to render these `.mdx` files as pages. The frontmatter in the MDX files is used for metadata like title and publication date.
+
+## Styling
+
+Styling is done using Tailwind CSS. Global styles and Tailwind configuration are likely in `app/css/style.css` and `tailwind.config.js` respectively (though `tailwind.config.js` isn't at the root).
+
+---
+
+This guide will serve as my primary reference as we work on redesigning the site for your immigration services business. I am now ready for you to share the content and we can begin the implementation.

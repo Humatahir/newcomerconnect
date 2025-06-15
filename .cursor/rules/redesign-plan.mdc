@@ -1,5 +1,64 @@
 ---
-description:
-globs:
+description: 
+globs: 
 alwaysApply: false
 ---
+# Newcomer Connect Redesign Plan
+
+This document outlines the step-by-step plan to adapt the existing Next.js template for the "Newcomer Connect" immigration services business. We will follow this plan to ensure all requirements are met systematically.
+
+---
+
+### **Phase 1: Content & Structural Foundation**
+
+This phase focuses on removing the old content, adding the new content, and restructuring the pages to match the business needs.
+
+1.  **Clean Slate:** We'll start by deleting all the placeholder blog posts to make way for our "Newcomer Resource Hub."
+    *   **Action:** Delete all `.mdx` files inside [`content/blog/`](mdc:content/blog).
+
+2.  **Establish the Core Pages:** We'll repurpose and rename existing pages to create our main site structure.
+    *   **Homepage (`app/(default)/page.tsx`):** No structural change needed, but we will completely overhaul its content in Phase 2.
+    *   **Services Page:** The existing "Pricing" page is a perfect candidate for our "Services" page.
+        *   **Action:** Rename the directory [`app/(default)/pricing/`](mdc:app/(default)/pricing/) to `app/(default)/services/`.
+    *   **About Us Page:** We need to create a new page for "About Us".
+        *   **Action:** Create a new directory `app/(default)/about/` with a `page.tsx` file inside it.
+    *   **Contact Page:** We'll repurpose the "Support" page.
+        *   **Action:** Rename the directory [`app/(default)/support/`](mdc:app/(default)/support/) to `app/(default)/contact/`.
+
+3.  **Create Detailed Content Pages:** We will create dedicated pages for each service and package to provide detailed information and improve SEO.
+    *   **Action:** Create a new [`app/(default)/packages/page.tsx`](mdc:app/(default)/packages/page.tsx) file.
+    *   **Action:** Create new sub-pages for each immigration service, for example: `app/(default)/services/express-entry/page.tsx`.
+
+---
+
+### **Phase 2: Component Adaptation & Content Integration**
+
+Now we'll modify the existing React components to display the "Newcomer Connect" content.
+
+1.  **Homepage Overhaul ([`app/(default)/page.tsx`](mdc:app/(default)/page.tsx)):**
+    *   **[`components/hero-home.tsx`](mdc:components/hero-home.tsx):** We will update the title, description, and call-to-action buttons with the "Newcomer Connect" messaging.
+    *   **[`components/features-home.tsx`](mdc:components/features-home.tsx):** This will be adapted to showcase the three main pillars: Immigration, Pre-arrival, and Post-Arrival Services.
+    *   **[`components/wall-of-love.tsx`](mdc:components/wall-of-love.tsx):** This will be used for client testimonials. We'll start with placeholder content.
+    *   **Action:** Remove unused components from the homepage file.
+
+2.  **Services & Packages Pages:**
+    *   **Services Page (`app/(default)/services/page.tsx`):** We will replace the content of this page to list the main service categories and link to the detailed pages.
+    *   **Packages Page (`app/(default)/packages/page.tsx`):** We will use the existing [`components/compare-plans.tsx`](mdc:components/compare-plans.tsx) component to display the "Basic," "Standard," and "Premium" packages.
+
+3.  **About Us & Contact Pages:**
+    *   **About Page (`app/(default)/about/page.tsx`):** We will populate this new page with the "About Us," "Vision," and "Mission" content.
+    *   **Contact Page (`app/(default)/contact/page.tsx`):** We will update this page with a simple contact form and the "Our Commitment" details. The [`@tailwindcss/forms`](mdc:package.json) plugin is already installed, which will make styling the form easy.
+
+---
+
+### **Phase 3: Navigation, Branding, and Final Touches**
+
+The final phase is to ensure the site is fully connected, branded, and easy to navigate.
+
+1.  **Update Navigation:** The header is the most important navigation element.
+    *   **Action:** Modify [`components/ui/header.tsx`](mdc:components/ui/header.tsx) to reflect the new page structure: Home, About Us, Services, Packages, and Contact.
+    *   **Action:** Update the links in [`components/ui/footer.tsx`](mdc:components/ui/footer.tsx) as well.
+
+2.  **Branding:** We'll update the visual elements to match the "Newcomer Connect" brand.
+    *   **Action:** Replace the logo in [`components/ui/header.tsx`](mdc:components/ui/header.tsx).
+    *   **Action:** Update the site metadata in [`app/(default)/layout.tsx`](mdc:app/(default)/layout.tsx) to change the browser tab title and description.
