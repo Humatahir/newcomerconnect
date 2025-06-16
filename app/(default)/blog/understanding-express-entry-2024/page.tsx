@@ -1,92 +1,90 @@
 import Image from 'next/image'
+import BlogImage from '@/public/website pictures/Emigrate.jpg'
 
 export const metadata = {
   title: 'Understanding the Express Entry System in 2024 - Newcomer Connect',
-  description: 'A deep dive into the Comprehensive Ranking System (CRS), recent category-based selection draws, and tips for optimizing your profile.',
+  description: 'A detailed guide to Canadas Express Entry system, including recent changes, eligibility requirements, and how to maximize your CRS score.',
 }
 
-export default function BlogPost() {
+export default function ExpressEntryPost() {
   return (
     <section className="relative">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="pt-32 pb-12 md:pt-40 md:pb-20">
-          <div className="max-w-3xl mx-auto">
-
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+        <div className="pb-12 pt-32 md:pb-20 md:pt-40">
+          <div className="mx-auto max-w-3xl">
             <article>
-
               <header className="mb-8">
-                {/* Title and excerpt */}
-                <div className="text-center md:text-left">
-                  <h1 className="h1 mb-4" data-aos="fade-up">Understanding the Express Entry System in 2024</h1>
-                  <p className="text-xl text-gray-600" data-aos="fade-up" data-aos-delay="200">A deep dive into the Comprehensive Ranking System (CRS), recent category-based selection draws, and tips for optimizing your profile.</p>
-                </div>
-                {/* Author meta */}
-                <div className="md:flex md:items-center md:justify-between mt-5">
-                  {/* Author image */}
-                  <div className="flex items-center justify-center" data-aos="fade-up" data-aos-delay="400">
-                    <a href="#">
-                      <Image className="rounded-full shrink-0 mr-4" src={'/images/your-images/avatar-01.jpg'} width={40} height={40} alt="Author 01" />
-                    </a>
-                    <div>
-                      <a href="#" className="font-medium text-gray-900 hover:text-blue-600 transition duration-150 ease-in-out">Jane Doe</a>
-                      <span className="text-gray-500"> - </span>
-                      <span className="text-gray-500">July 25, 2024</span>
-                    </div>
-                  </div>
-                </div>
+                <h1 className="h1 mb-4 text-center">Understanding the Express Entry System in 2024</h1>
+                <p className="text-center text-lg text-gray-600">Published on <time dateTime="2024-06-15">June 15, 2024</time></p>
               </header>
 
-              {/* Article image */}
-              <figure className="mb-8" data-aos="fade-up" data-aos-delay="600">
-                <Image className="w-full" src={'/images/your-images/blog-01.jpg'} width={1024} height={576} alt="Blog post" />
+              <figure className="mb-8">
+                <Image className="w-full rounded" src={BlogImage} width="1024" height="576" alt="Express Entry Blog Post" />
               </figure>
 
-              {/* Article content */}
-              <div className="text-lg text-gray-600">
-                <p className="mb-8">
-                  The Express Entry system remains Canada's flagship pathway for skilled workers seeking permanent residency. Managed by Immigration, Refugees and Citizenship Canada (IRCC), it's a competitive system that ranks candidates based on a variety of factors. Understanding how it works is the first step towards a successful application.
+              <div className="prose prose-lg mx-auto text-gray-600">
+                <p>
+                  Canada's Express Entry system remains the primary pathway for skilled workers seeking permanent residence. In 2024, the system has seen significant updates, particularly with the introduction of category-based selection draws. This guide will walk you through how Express Entry works, what's new, and how Newcomer Connect can help you navigate this complex process.
                 </p>
-                <h3 className="h3 mb-4 text-gray-800">The Comprehensive Ranking System (CRS)</h3>
-                <p className="mb-8">
-                  At the heart of Express Entry is the CRS. It's a points-based system used to assess and score your profile in the Express Entry pool. Points are awarded for:
+
+                <h3 className="h3 mt-12">What is Express Entry?</h3>
+                <p>
+                  Express Entry is not an immigration program itself, but a system used by Immigration, Refugees and Citizenship Canada (IRCC) to manage applications for three key economic immigration programs:
                 </p>
-                <ul className="list-disc list-inside space-y-2 mb-8">
-                  <li><strong>Core Human Capital Factors:</strong> Age, level of education, language proficiency in English and/or French, and Canadian work experience.</li>
-                  <li><strong>Spouse or Common-law Partner Factors:</strong> Your partner's education, language skills, and work experience can also earn you points.</li>
-                  <li><strong>Skill Transferability Factors:</strong> This combines your education and work experience to award additional points.</li>
-                  <li><strong>Additional Points:</strong> Awarded for a provincial nomination, a valid job offer, Canadian study experience, or having a sibling in Canada.</li>
-                </ul>
-                <h3 className="h3 mb-4 text-gray-800">Category-Based Selection Draws</h3>
-                <p className="mb-8">
-                  In 2023, IRCC introduced category-based selection draws to target candidates with specific skills, work experience, or language abilities. For 2024, the focus remains on candidates in high-demand sectors, including:
-                </p>
-                <ul className="list-disc list-inside space-y-2 mb-8">
-                  <li>Healthcare</li>
-                  <li>Science, Technology, Engineering, and Math (STEM) occupations</li>
-                  <li>Trades, such as carpenters, plumbers, and contractors</li>
-                  <li>Transport and agriculture</li>
-                  <li>Strong French-language proficiency</li>
-                </ul>
-                <p className="mb-8">
-                  These draws have lower CRS score requirements for eligible candidates, providing a significant advantage for those who qualify.
-                </p>
-                <h3 className="h3 mb-4 text-gray-800">Tips for Optimizing Your Profile</h3>
-                <p className="mb-8">
-                  To maximize your chances, consider the following:
-                </p>
-                <ul className="list-disc list-inside space-y-2 mb-8">
-                  <li><strong>Improve Language Scores:</strong> Retaking your language tests to achieve higher scores can significantly boost your CRS points.</li>
-                  <li><strong>Gain More Work Experience:</strong> Another year of skilled work experience can increase your score.</li>
-                  <li><strong>Explore Provincial Nominee Programs (PNPs):</strong> A provincial nomination grants you an additional 600 CRS points, virtually guaranteeing an Invitation to Apply (ITA).</li>
-                  <li><strong>Complete an Educational Credential Assessment (ECA):</strong> Ensure your foreign education is recognized in Canada.</li>
+                <ul>
+                  <li><strong>Federal Skilled Worker Program (FSWP):</strong> For skilled workers with foreign work experience.</li>
+                  <li><strong>Federal Skilled Trades Program (FSTP):</strong> For skilled workers qualified in a skilled trade.</li>
+                  <li><strong>Canadian Experience Class (CEC):</strong> For skilled workers who have Canadian work experience.</li>
                 </ul>
                 <p>
-                  Navigating Express Entry can be complex, but with a strategic approach, you can significantly improve your chances of success. Our team at Newcomer Connect is here to guide you through every step of the process.
+                  Candidates who are eligible for one of these programs can submit a profile to the Express Entry pool. They are then ranked using the Comprehensive Ranking System (CRS).
+                </p>
+
+                <h3 className="h3 mt-12">The Comprehensive Ranking System (CRS)</h3>
+                <p>
+                  The CRS is a points-based system that ranks candidates in the Express Entry pool. Points are awarded based on:
+                </p>
+                <ul>
+                  <li><strong>Core/Human Capital Factors:</strong> Age, education, language proficiency (English and/or French), and Canadian work experience.</li>
+                  <li><strong>Spouse or Common-law Partner Factors:</strong> Your partner's education, language proficiency, and Canadian work experience.</li>
+                  <li><strong>Skill Transferability Factors:</strong> A combination of your education, foreign work experience, and language skills.</li>
+                  <li><strong>Additional Points:</strong> Awarded for a provincial nomination, a valid job offer, Canadian study experience, a sibling in Canada, or strong French language skills.</li>
+                </ul>
+                <p>
+                  IRCC holds regular draws from the pool, inviting the highest-ranking candidates to apply for permanent residence.
+                </p>
+
+                <h3 className="h3 mt-12">New in 2024: Category-Based Selection Draws</h3>
+                <p>
+                  The most significant change in recent times is the introduction of category-based selection draws. These draws target candidates with specific skills, work experience, or language abilities that align with Canada's economic priorities and labour market needs. For 2024, the targeted categories include:
+                </p>
+                <ul>
+                  <li>French-language proficiency</li>
+                  <li>Healthcare occupations</li>
+                  <li>Science, Technology, Engineering, and Math (STEM) occupations</li>
+                  <li>Trade occupations (e.g., carpenters, plumbers, contractors)</li>
+                  <li>Transport occupations</li>
+                  <li>Agriculture and agri-food occupations</li>
+                </ul>
+                <p>
+                  This means that even if your CRS score isn't at the top of the general pool, you may still receive an Invitation to Apply (ITA) if your profile matches one of these in-demand categories.
+                </p>
+
+                <h3 className="h3 mt-12">How Newcomer Connect Can Help</h3>
+                <p>
+                  Navigating the Express Entry system can be daunting. At Newcomer Connect, we provide expert guidance to maximize your chances of success.
+                </p>
+                <ul>
+                  <li><strong>Profile Assessment:</strong> We conduct a thorough assessment of your profile to determine your eligibility and estimate your CRS score.</li>
+                  <li><strong>Maximizing Your Score:</strong> We identify areas where you can improve your CRS score, such as language testing, educational credential assessments, or gaining relevant work experience.</li>
+                  <li><strong>Application Management:</strong> From creating your Express Entry profile to submitting your final application after receiving an ITA, we manage the entire process meticulously to ensure accuracy and completeness.</li>
+                  <li><strong>Strategic Guidance:</strong> We keep you informed about the latest draw trends and category-based selections, providing strategic advice on how to position your profile for success.</li>
+                </ul>
+                <p>
+                  Ready to take the first step? <a href="/contact" className="text-blue-600 hover:underline">Contact us today for a free consultation</a> to discuss your Express Entry profile.
                 </p>
               </div>
-
             </article>
-
           </div>
         </div>
       </div>

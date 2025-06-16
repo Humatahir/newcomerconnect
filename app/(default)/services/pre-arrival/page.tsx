@@ -1,128 +1,139 @@
-import Cta from '@/components/cta-alternative';
+'use client';
 
-export const metadata = {
-  title: 'Pre-Arrival Services - Newcomer Connect',
-  description: 'Preparing for your Canadian journey with our expert guidance to ensure a smooth arrival.',
-};
+import { useEffect } from 'react';
+import Cta from '@/components/cta-alternative';
+import Image from 'next/image';
+import PreArrivalImage from '@/public/website pictures/Winter_20in_20the_20Mountains.jpg';
+import { CheckCircleIcon, RocketLaunchIcon, HomeIcon, TruckIcon, BanknotesIcon, BriefcaseIcon, AcademicCapIcon, HeartIcon, DocumentTextIcon } from '@heroicons/react/24/outline';
 
 export default function PreArrivalPage() {
+  const services = [
+    {
+      title: "Initial Planning & Consultation",
+      icon: RocketLaunchIcon,
+      points: ["Personal Settlement Strategy", "Virtual Orientation Sessions"]
+    },
+    {
+      title: "Housing Preparation",
+      icon: HomeIcon,
+      points: ["Accommodation Planning", "Housing Documentation"]
+    },
+    {
+      title: "Moving & Logistics",
+      icon: TruckIcon,
+      points: ["Relocation Planning", "Essential Items Planning"]
+    },
+    {
+      title: "Financial Preparation",
+      icon: BanknotesIcon,
+      points: ["Banking & Finance", "Cost Planning"]
+    },
+    {
+      title: "Employment Preparation",
+      icon: BriefcaseIcon,
+      points: ["Career Planning", "Professional Documentation"]
+    },
+    {
+      title: "Education Planning",
+      icon: AcademicCapIcon,
+      points: ["School Preparation", "Language Preparation"]
+    },
+    {
+      title: "Healthcare Preparation",
+      icon: HeartIcon,
+      points: ["Medical Planning"]
+    },
+    {
+      title: "Documents & Legal",
+      icon: DocumentTextIcon,
+      points: ["Documentation Preparation"]
+    }
+  ];
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const parallax = document.querySelector('.parallax-image') as HTMLElement;
+      if (parallax) {
+        const scrolled = window.scrollY;
+        parallax.style.transform = `translateY(${scrolled * 0.3}px)`;
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <>
-      <section className="bg-gray-100">
+      <section className="relative">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="pb-12 pt-32 md:pb-20 md:pt-40">
 
             {/* Page header */}
-            <div className="mx-auto max-w-3xl pb-12 text-center">
-              <h1 className="h1">Preparing for Your Canadian Journey</h1>
-              <p className="mt-4 text-xl text-gray-600">At Newcomer Connect, we understand that preparation is key to a successful transition to Canada. Our pre-arrival services are designed to ensure you're fully prepared before you land. With our expert guidance, you'll have everything planned and organized for a smooth arrival in your new home.</p>
+            <div className="mx-auto max-w-3xl pb-12 text-center md:pb-20">
+              <h1 className="h1">Pre-Arrival Services</h1>
             </div>
 
-            {/* Content */}
-            <div className="mx-auto grid max-w-5xl gap-12 md:grid-cols-2">
-
-              {/* Column 1 */}
-              <div className="space-y-8">
-                <div>
-                  <h3 className="h4 mb-4 text-gray-800">1. Initial Planning & Consultation</h3>
-                  <ul className="list-disc list-inside space-y-2 text-lg text-gray-600">
-                    <li>Personal Settlement Strategy</li>
-                    <li>Virtual Orientation Sessions</li>
-                  </ul>
-                </div>
-                <div>
-                  <h3 className="h4 mb-4 text-gray-800">2. Housing Preparation</h3>
-                  <ul className="list-disc list-inside space-y-2 text-lg text-gray-600">
-                    <li>Accommodation Planning</li>
-                    <li>Housing Documentation</li>
-                  </ul>
-                </div>
-                <div>
-                  <h3 className="h4 mb-4 text-gray-800">3. Moving & Logistics</h3>
-                  <ul className="list-disc list-inside space-y-2 text-lg text-gray-600">
-                    <li>Relocation Planning</li>
-                    <li>Essential Items Planning</li>
-                  </ul>
-                </div>
-                <div>
-                  <h3 className="h4 mb-4 text-gray-800">4. Financial Preparation</h3>
-                  <ul className="list-disc list-inside space-y-2 text-lg text-gray-600">
-                    <li>Banking & Finance</li>
-                    <li>Cost Planning</li>
-                  </ul>
-                </div>
-                <div>
-                  <h3 className="h4 mb-4 text-gray-800">5. Employment Preparation</h3>
-                  <ul className="list-disc list-inside space-y-2 text-lg text-gray-600">
-                    <li>Career Planning</li>
-                    <li>Professional Documentation</li>
-                  </ul>
-                </div>
-                <div>
-                  <h3 className="h4 mb-4 text-gray-800">6. Education Planning</h3>
-                  <ul className="list-disc list-inside space-y-2 text-lg text-gray-600">
-                    <li>School Preparation</li>
-                    <li>Language Preparation</li>
-                  </ul>
-                </div>
-                <div>
-                  <h3 className="h4 mb-4 text-gray-800">7. Healthcare Preparation</h3>
-                  <ul className="list-disc list-inside space-y-2 text-lg text-gray-600">
-                    <li>Medical Planning</li>
-                  </ul>
-                </div>
-                <div>
-                  <h3 className="h4 mb-4 text-gray-800">8. Documents & Legal</h3>
-                  <ul className="list-disc list-inside space-y-2 text-lg text-gray-600">
-                    <li>Documentation Preparation</li>
-                  </ul>
-                </div>
-              </div>
-
-              {/* Column 2 */}
-              <div className="space-y-8">
-                <div>
-                  <h3 className="h4 mb-4 text-gray-800">Service Delivery Methods</h3>
-                  <ul className="list-disc list-inside space-y-2 text-lg text-gray-600">
-                    <li>Virtual consultations</li>
-                    <li>Email support</li>
-                    <li>Phone meetings</li>
-                    <li>Document review services</li>
-                    <li>Online resource access</li>
-                  </ul>
-                </div>
-                <div>
-                  <h3 className="h4 mb-4 text-gray-800">Why Choose Our Pre-Arrival Services</h3>
-                  <ul className="list-disc list-inside space-y-2 text-lg text-gray-600">
-                    <li>Proactive preparation approach</li>
-                    <li>Customized planning</li>
-                    <li>Expert guidance</li>
-                    <li>Time and stress saving</li>
-                    <li>Cost-effective solutions</li>
-                    <li>Seamless transition support</li>
-                  </ul>
-                </div>
-                <div>
-                  <h3 className="h4 mb-4 text-gray-800">Getting Started</h3>
-                  <ul className="list-disc list-inside space-y-2 text-lg text-gray-600">
-                    <li>Book an initial consultation</li>
-                    <li>Receive needs assessment</li>
-                    <li>Choose your service package</li>
-                    <li>Begin preparation process</li>
-                    <li>Regular progress reviews</li>
-                    <li>Arrival coordination</li>
-                  </ul>
-                </div>
-              </div>
+            <div className="parallax-container" data-aos="fade-up">
+              <Image src={PreArrivalImage} alt="Pre-arrival services" className="parallax-image" priority />
             </div>
 
-            <div className="mx-auto max-w-3xl text-center pt-16">
-              <p className="text-lg text-gray-600">Our pre-arrival services can be customized to meet your specific needs and circumstances. Contact us for a detailed discussion of how we can best prepare you for your Canadian journey.</p>
+            {/* Section content */}
+            <div className="prose prose-lg mx-auto max-w-4xl text-gray-600 text-center pt-12 md:pt-20">
+              <p>
+                At Newcomer Connect, we understand that preparation is key to a successful transition to Canada. Our pre-arrival services are designed to ensure you're fully prepared before you land. With our expert guidance, you'll have everything planned and organized for a smooth arrival in your new home.
+              </p>
             </div>
-
           </div>
         </div>
       </section>
+
+      {/* Why Choose Us Section */}
+      <section className="bg-gray-50 py-12 md:py-20">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6">
+          <h2 className="h2 text-center mb-12">Why Choose Our Pre-Arrival Services?</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <div className="p-6">
+              <CheckCircleIcon className="w-12 h-12 mx-auto text-blue-600 mb-4" />
+              <h3 className="h4 mb-2">Proactive Preparation</h3>
+              <p className="text-gray-600">We take a proactive approach to planning, addressing potential challenges before they arise.</p>
+            </div>
+            <div className="p-6">
+              <CheckCircleIcon className="w-12 h-12 mx-auto text-blue-600 mb-4" />
+              <h3 className="h4 mb-2">Customized Planning</h3>
+              <p className="text-gray-600">Your settlement plan is tailored to your unique needs, goals, and circumstances.</p>
+            </div>
+            <div className="p-6">
+              <CheckCircleIcon className="w-12 h-12 mx-auto text-blue-600 mb-4" />
+              <h3 className="h4 mb-2">Seamless Transition</h3>
+              <p className="text-gray-600">Our goal is to save you time, reduce stress, and ensure your arrival in Canada is as smooth as possible.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Grid Section */}
+      <section className="py-12 md:py-20">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6">
+          <h2 className="h2 text-center mb-12">What We Offer</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {services.map((service, index) => (
+              <div key={index} className="rounded-lg border border-gray-200 p-6 shadow-sm">
+                <div className="flex items-center mb-4">
+                  <service.icon className="w-8 h-8 text-blue-600 mr-4" />
+                  <h3 className="h4">{service.title}</h3>
+                </div>
+                <ul className="list-disc list-inside space-y-2 text-lg text-gray-600">
+                  {service.points.map((point, i) => (
+                    <li key={i}>{point}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <Cta
         className="overflow-hidden"
         heading="Ready to Start Planning?"

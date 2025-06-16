@@ -1,35 +1,29 @@
 import PostItem from './post-item'
+import ExpressEntryImage from '@/public/website pictures/Emigrate.jpg'
+import PnpImage from '@/public/website pictures/Ontario map.jpg'
+import FamilySponsorshipImage from '@/public/website pictures/Beautiful White Sakura Blooming Garden , rainy day.jpg'
 
 const posts = [
     {
         id: 1,
         slug: 'understanding-express-entry-2024',
         title: 'Understanding the Express Entry System in 2024',
-        image: '/images/your-images/blog-01.jpg',
-        date: '2024-07-25',
-        excerpt: 'A deep dive into the Comprehensive Ranking System (CRS), recent category-based selection draws, and tips for optimizing your profile.',
-        author: 'Jane Doe',
-        authorImg: '/images/your-images/avatar-01.jpg',
+        image: ExpressEntryImage,
+        excerpt: "A detailed guide to Canada's Express Entry system, including recent changes, eligibility requirements, and how to maximize your CRS score.",
     },
     {
         id: 2,
         slug: 'pnp-key-requirements',
         title: 'Key Requirements for the Provincial Nominee Program (PNP)',
-        image: '/images/your-images/blog-02.jpg',
-        date: '2024-07-24',
-        excerpt: 'An overview of how PNPs work, the general eligibility criteria, and a look at popular streams in Ontario, British Columbia, and Alberta.',
-        author: 'John Smith',
-        authorImg: '/images/your-images/avatar-02.jpg',
+        image: PnpImage,
+        excerpt: "An overview of Canada's PNPs, how they work with Express Entry, and the key requirements for applying.",
     },
     {
         id: 3,
         slug: 'navigating-family-sponsorship',
         title: 'Navigating the Family Sponsorship Application Process',
-        image: '/images/your-images/blog-03.jpg',
-        date: '2024-07-23',
-        excerpt: 'A step-by-step guide to sponsoring a spouse, partner, or child, including financial requirements and processing times.',
-        author: 'Jane Doe',
-        authorImg: '/images/your-images/avatar-01.jpg',
+        image: FamilySponsorshipImage,
+        excerpt: "A guide to Canada's Family Sponsorship program, covering eligibility for sponsors and sponsored persons, and the application process.",
     }
 ]
 

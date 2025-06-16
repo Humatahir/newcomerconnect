@@ -33,8 +33,7 @@ export default function ComparePlans() {
             <div className="relative flex flex-col h-full p-6 rounded-lg border border-gray-200 shadow-md" data-aos="fade-up">
               <div className="mb-4 pb-4 border-b border-gray-200">
                 <div className="h4 text-blue-600 mb-1">Basic</div>
-                <div className="text-gray-600 font-medium">Pre-arrival Virtual Support Package</div>
-                <div className="text-3xl font-bold text-gray-800 mt-2">Contact for Price</div>
+                <div className="text-3xl font-bold text-gray-800 mt-2">Pre-arrival Virtual Support Package</div>
               </div>
               <div className="font-medium mb-3">
                 <div className="text-lg text-gray-800">Key Features:</div>
@@ -73,8 +72,7 @@ export default function ComparePlans() {
               </div>
               <div className="mb-4 pb-4 border-b border-gray-200">
                 <div className="h4 text-blue-600 mb-1">Standard</div>
-                <div className="text-gray-600 font-medium">Arrival and Settlement Package</div>
-                <div className="text-3xl font-bold text-gray-800 mt-2">Contact for Price</div>
+                <div className="text-3xl font-bold text-gray-800 mt-2">Arrival and Settlement Package</div>
               </div>
               <div className="font-medium mb-3">
                 <div className="text-lg text-gray-800">Everything in Kickstarter, plus:</div>
@@ -110,8 +108,7 @@ export default function ComparePlans() {
             <div className="relative flex flex-col h-full p-6 rounded-lg border border-gray-200 shadow-md" data-aos="fade-up" data-aos-delay="200">
               <div className="mb-4 pb-4 border-b border-gray-200">
                 <div className="h4 text-blue-600 mb-1">Premium</div>
-                <div className="text-gray-600 font-medium">Premium Settlement Package</div>
-                <div className="text-3xl font-bold text-gray-800 mt-2">Contact for Price</div>
+                <div className="text-3xl font-bold text-gray-800 mt-2">Premium Settlement Package</div>
               </div>
               <div className="font-medium mb-3">
                 <div className="text-lg text-gray-800">Everything in Welcome, plus:</div>

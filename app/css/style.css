@@ -4,6 +4,56 @@
 @import './additional-styles/utility-patterns.css' layer(components);
 @import './additional-styles/theme.css';
 
+/* Canadian Theme Colors */
+:root {
+  --color-canadian-red: #D8292F;
+  --color-canadian-blue: #0077C8;
+}
+
+/* Applying the new theme */
+.h1, .h2, .h3, .h4 {
+  color: #333; /* Darker text for better contrast on white background */
+}
+.text-blue-600 {
+  color: var(--color-canadian-red) !important;
+}
+.bg-blue-600 {
+  background-color: var(--color-canadian-red) !important;
+}
+.hover\:bg-blue-700:hover {
+    background-color: #b92329 !important; /* A darker red for hover */
+}
+.border-blue-500 {
+    border-color: var(--color-canadian-blue) !important;
+}
+.text-blue-300 {
+    color: var(--color-canadian-blue) !important;
+}
+.bg-linear-to-t {
+    background-color: var(--color-canadian-red);
+    background-image: none !important;
+}
+
+
+/* Parallax scroll effect */
+.parallax-container {
+    height: 60vh;
+    overflow: hidden;
+    position: relative;
+    border-radius: 0.5rem; /* rounded-lg */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-xl */
+}
+
+.parallax-image {
+    width: 100%;
+    height: 100vh; /* Taller than container to allow for scrolling */
+    object-fit: cover;
+    position: absolute;
+    top: -40vh; /* Start with the image shifted up */
+    left: 0;
+    z-index: -1;
+}
+
 @plugin "@tailwindcss/forms" {
   strategy: base;
 }
