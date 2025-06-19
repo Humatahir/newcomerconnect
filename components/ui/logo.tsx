@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image';
-import NewLogo from '@/public/website pictures/Newcomer Connect logo.png';
+import NewLogo from '@/public/images/clear newcomer connect logo.png';
 
 export default function Logo() {
   return (

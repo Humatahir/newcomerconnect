@@ -24,6 +24,11 @@ export default function PostItem({ slug, title, image, excerpt }: PostItemProps)
                 </h3>
             </header>
             <p className="text-lg text-gray-600 grow">{excerpt}</p>
+            <footer className="mt-4">
+                <Link href={postLink} className="btn-sm text-white bg-canadian-red hover:bg-red-700">
+                    Read More
+                </Link>
+            </footer>
         </article>
     )
 } 

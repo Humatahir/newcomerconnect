@@ -1,6 +1,6 @@
 export const metadata = {
-  title: 'Home - Newcomer Connect',
-  description: 'Your trusted partner for a new beginning in Canada.',
+  title: 'Canadian Immigration & Settlement Services | Newcomer Connect',
+  description: 'Your trusted partner for a new beginning in Canada. We offer expert immigration consulting, pre-arrival planning, and post-arrival settlement support to help you move to Canada with confidence.',
 };
 
 import Hero from '@/components/hero-home';

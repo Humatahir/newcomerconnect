@@ -1,77 +1,89 @@
+import Image from 'next/image';
+import CommitmentImage from '@/public/website pictures/Double_20exposure_20of_20a_20businessman_20handshake_20on_20world.jpg';
+
 export const metadata = {
-  title: 'Our Commitment - Newcomer Connect',
-  description: 'Learn about our commitment to your success in Canada.',
+  title: 'Our Commitment to Newcomers in Canada | Newcomer Connect',
+  description: 'Learn about our commitment to providing personalized, stress-free, and comprehensive support for new immigrants starting their life in Canada.',
 };
 
 export default function CommitmentPage() {
+  const commitments = [
+    {
+      title: "How We Deliver Our Services",
+      points: [
+        "Personal attention to your specific needs",
+        "Regular progress monitoring",
+        "Flexible scheduling options",
+        "Ongoing support and guidance",
+        "Cultural sensitivity and understanding",
+      ]
+    },
+    {
+      title: "Service Delivery Options",
+      points: [
+        "In-person support (GTA area)",
+        "Virtual assistance",
+        "Phone consultations",
+        "Email support",
+        "Weekend appointments available",
+      ]
+    },
+    {
+      title: "Why Choose Our Services",
+      points: [
+        "Comprehensive support system",
+        "Experienced settlement specialists",
+        "Personalized service plans",
+        "Proven success record",
+        "Continuous support availability",
+        "Cultural competency",
+      ]
+    }
+  ];
+
   return (
-    <section className="bg-gray-100">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="pb-12 pt-32 md:pb-20 md:pt-40">
+    <>
+      <section className="relative">
+        {/* Background image */}
+        <div className="absolute inset-0">
+          <Image
+            className="w-full h-full object-cover"
+            src={CommitmentImage}
+            layout="fill"
+            objectFit="cover"
+            alt="Our Commitment"
+          />
+          <div className="absolute inset-0 bg-black opacity-50" />
+        </div>
 
-          {/* Page header */}
-          <div className="mx-auto max-w-3xl pb-12 text-center">
-            <h1 className="h1">Our Commitment</h1>
-            <p className="mt-4 text-xl text-gray-600">Your trusted partner for a smooth and stress-free settlement.</p>
-          </div>
-
-          {/* Content */}
-          <div className="mx-auto max-w-5xl">
-            <div className="grid gap-12 md:grid-cols-2">
-
-              {/* Column 1 */}
-              <div className="space-y-8">
-                <div>
-                  <h3 className="h4 mb-4 text-gray-800">Each service is delivered with:</h3>
-                  <ul className="list-disc list-inside space-y-2 text-lg text-gray-600">
-                    <li>Personal attention to your specific needs</li>
-                    <li>Regular progress monitoring</li>
-                    <li>Flexible scheduling options</li>
-                    <li>Ongoing support and guidance</li>
-                    <li>Cultural sensitivity and understanding</li>
-                  </ul>
-                </div>
-                <div>
-                  <h3 className="h4 mb-4 text-gray-800">Service Delivery Options</h3>
-                  <ul className="list-disc list-inside space-y-2 text-lg text-gray-600">
-                    <li>In-person support (GTA area)</li>
-                    <li>Virtual assistance</li>
-                    <li>Phone consultations</li>
-                    <li>Email support</li>
-                    <li>Weekend appointments available</li>
-                  </ul>
-                </div>
-              </div>
-
-              {/* Column 2 */}
-              <div className="space-y-8">
-                <div>
-                  <h3 className="h4 mb-4 text-gray-800">Additional Support Features</h3>
-                  <ul className="list-disc list-inside space-y-2 text-lg text-gray-600">
-                    <li>24/7 emergency contact</li>
-                    <li>Monthly settlement workshops</li>
-                    <li>Settlement progress tracking</li>
-                    <li>Regular check-in meetings</li>
-                  </ul>
-                </div>
-                <div>
-                  <h3 className="h4 mb-4 text-gray-800">Why Choose Our Services</h3>
-                  <ul className="list-disc list-inside space-y-2 text-lg text-gray-600">
-                    <li>Comprehensive support system</li>
-                    <li>Experienced settlement specialists</li>
-                    <li>Personalized service plans</li>
-                    <li>Proven success record</li>
-                    <li>Continuous support availability</li>
-                    <li>Cultural competency</li>
-                  </ul>
-                </div>
-              </div>
-
+        {/* Content */}
+        <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
+          <div className="pt-32 pb-12 md:pt-40 md:pb-20">
+            {/* Page header */}
+            <div className="max-w-3xl mx-auto text-center">
+              <h1 className="h1 mb-4 text-white">Our Commitment to You</h1>
+              <p className="text-xl text-gray-200">
+                Your trusted partner for a smooth and stress-free settlement in Canada.
+              </p>
             </div>
           </div>
-
         </div>
-      </div>
-    </section>
+      </section>
+
+      <section className="bg-white py-12 md:py-20">
+        <div className="mx-auto max-w-3xl space-y-12 px-4 sm:px-6">
+          {commitments.map((commitment, index) => (
+            <div key={index} className="rounded-lg border border-gray-200 p-8 shadow-sm">
+              <h3 className="h3 mb-4 text-canadian-red">{commitment.title}</h3>
+              <ul className="list-disc list-inside space-y-2 text-lg text-gray-600">
+                {commitment.points.map((point, i) => (
+                  <li key={i}>{point}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </section>
+    </>
   );
 } 

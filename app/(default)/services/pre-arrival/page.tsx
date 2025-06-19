@@ -3,10 +3,10 @@
 import { useEffect } from 'react';
 import Cta from '@/components/cta-alternative';
 import Image from 'next/image';
-import PreArrivalImage from '@/public/website pictures/Winter_20in_20the_20Mountains.jpg';
+import PreArrivalImage from '@/public/website pictures/Beautiful White Sakura Blooming Garden , rainy day.jpg';
 import { CheckCircleIcon, RocketLaunchIcon, HomeIcon, TruckIcon, BanknotesIcon, BriefcaseIcon, AcademicCapIcon, HeartIcon, DocumentTextIcon } from '@heroicons/react/24/outline';
 
-export default function PreArrivalPage() {
+export default function PreArrival() {
   const services = [
     {
       title: "Initial Planning & Consultation",
@@ -66,22 +66,26 @@ export default function PreArrivalPage() {
   return (
     <>
       <section className="relative">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <div className="pb-12 pt-32 md:pb-20 md:pt-40">
+        {/* Background image */}
+        <div className="absolute inset-0">
+          <Image
+            className="w-full h-full object-cover"
+            src={PreArrivalImage}
+            layout="fill"
+            objectFit="cover"
+            alt="Pre-arrival services"
+          />
+          <div className="absolute inset-0 bg-black opacity-50" />
+        </div>
 
+        {/* Content */}
+        <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
+          <div className="pt-32 pb-12 md:pt-40 md:pb-20">
             {/* Page header */}
-            <div className="mx-auto max-w-3xl pb-12 text-center md:pb-20">
-              <h1 className="h1">Pre-Arrival Services</h1>
-            </div>
-
-            <div className="parallax-container" data-aos="fade-up">
-              <Image src={PreArrivalImage} alt="Pre-arrival services" className="parallax-image" priority />
-            </div>
-
-            {/* Section content */}
-            <div className="prose prose-lg mx-auto max-w-4xl text-gray-600 text-center pt-12 md:pt-20">
-              <p>
-                At Newcomer Connect, we understand that preparation is key to a successful transition to Canada. Our pre-arrival services are designed to ensure you're fully prepared before you land. With our expert guidance, you'll have everything planned and organized for a smooth arrival in your new home.
+            <div className="max-w-3xl mx-auto text-center">
+              <h1 className="h1 mb-4 text-white">Pre-Arrival Services</h1>
+              <p className="text-xl text-gray-200">
+                Arrive in Canada confident and prepared. We'll handle the details before you even pack your bags.
               </p>
             </div>
           </div>

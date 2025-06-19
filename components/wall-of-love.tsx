@@ -15,7 +15,7 @@ const testimonials = [
   {
     name: "Anjali Sharma",
     username: "India to Vancouver",
-    date: "May 18, 2024",
+    date: "October 12, 2024",
     content: "I was overwhelmed with the Express Entry process. The team at Newcomer Connect clarified everything and helped me optimize my profile. I received my invitation to apply just a few months later. Truly professional service!",
     channel: "Google",
     rating: 5,
@@ -23,7 +23,7 @@ const testimonials = [
   {
     name: "Mohammed Al-Farsi",
     username: "UAE to Calgary",
-    date: "May 15, 2024",
+    date: "January 7, 2025",
     content: "Finding work in a new country is tough. The career services and licensing guidance from Newcomer Connect were critical for me to land a job in my field. Thank you!",
     channel: "Google",
     rating: 5,
@@ -31,7 +31,7 @@ const testimonials = [
   {
     name: "Chloe Dubois",
     username: "France to Montreal",
-    date: "May 12, 2024",
+    date: "March 18, 2025",
     content: "From getting my SIN to opening a bank account, the post-arrival services were a lifesaver. It felt like having a knowledgeable friend in a new city.",
     channel: "Google",
     rating: 5,

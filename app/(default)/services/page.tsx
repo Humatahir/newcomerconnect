@@ -3,8 +3,8 @@ import Image from 'next/image';
 import ServicesImage from '@/public/website pictures/view_20of_20Nathan_20Phillips_20Square_20and_20City_20Hall_20in_20Toronto.jpg';
 
 export const metadata = {
-  title: 'Our Services - Newcomer Connect',
-  description: 'Explore our comprehensive services designed to support you at every stage of your journey to Canada.',
+  title: 'Immigration and Settlement Services for Canada | Newcomer Connect',
+  description: 'Explore our comprehensive immigration and settlement services, including Express Entry, PNP, family sponsorship, and pre-arrival support for moving to Canada.',
 };
 
 import Cta from "@/components/cta-alternative";
